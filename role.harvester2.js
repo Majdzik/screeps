@@ -59,6 +59,12 @@ var roleHarvester = {
                     }
             });
             
+             var targetsTOWER = creep.room.find(FIND_STRUCTURES, {
+                    filter: (structure) => {
+                        return structure.structureType == STRUCTURE_STORAGE && structure.energy < structure.energyCapacity;
+                    }
+            });
+            
             //Sum Arry in prio order
             targets = targetsEXTENSION.concat(targetsSPAWN,targetsTOWER);
             targets=creep.pos.findClosestByPath(targets);
