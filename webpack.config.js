@@ -1,6 +1,6 @@
 ﻿module.exports = {
   devtool: 'source-map',
-  entry: './src/main.ts',
+  entry: './src/app.ts',
   output: {
     filename: './main.js',
     pathinfo: true,
